@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Parallax Scrolling Website | Vanilla JavaScript</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+<header>
+    <a href="#" class="logo">LOGO</a>
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</header>
+<section>
+  <img src="img/stars.png" id="stars">
+  <img src="img/moon.png" id="moon">
+  <img src="img/mountains_behind.png" id="mountains_behind">
+  <h2 id="text">Moon Light</h2>
+  <a href="#sec" id="btn">Explore</a>
+  <img src="img/mountains_front.png" id="mountains_front">
+</section>
+<div class="sec" id="sec">
+<h2>Parallax Scrolling Effects</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit enim id esse optio sequi deleniti quas corporis modi laborum! Nulla. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae eligendi aliquid, delectus, iure facere explicabo molestiae illo commodi optio eos iste temporibus officiis incidunt? Minus, culpa non. Est, recusandae nesciunt?
+Repudiandae similique exercitationem minus, veniam molestiae totam consequuntur, ipsa commodi vel nesciunt quibusdam. Facilis est quam ea laborum. Libero neque a cum obcaecati magni quos animi eveniet dolores perferendis iste!<br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam asperiores, ratione iste mollitia laudantium autem sequi quas saepe reiciendis tempore omnis minima animi ipsa voluptate veritatis cum perspiciatis molestiae vero!
+Doloribus mollitia earum dolorem quibusdam modi temporibus sit labore. Quas repellat porro temporibus quisquam deleniti cumque ratione ex neque nostrum similique dolorum, harum nihil ab. Quisquam iste et voluptatum harum.<br><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta rerum, culpa minima soluta atque sunt, tenetur labore illum ad unde, fugiat eaque nemo ipsa eum nulla laudantium? Voluptas, quos corporis.
+Aut incidunt quo voluptatum voluptate sit unde a, sapiente at, eveniet laboriosam debitis consequatur similique ea dolore quos eligendi dolorem soluta! Earum ratione rerum dolorum quia facilis quod eligendi neque!
+Laudantium eligendi ea assumenda sapiente aperiam qui, eaque itaque sequi repudiandae excepturi ullam numquam necessitatibus sint deserunt iure? Praesentium quo illo aliquam laborum debitis, eum optio itaque officiis sit quod?
+Quasi facere inventore quibusdam deleniti asperiores? Inventore saepe, enim quibusdam autem eos consequuntur adipisci optio tempore id perspiciatis magnam fugit ducimus mollitia recusandae sapiente, quam quae similique provident. Ullam, id?<br><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis quam saepe aliquid quisquam quis quod repudiandae reprehenderit ea maiores quia, corrupti ullam sit minus doloremque. Voluptates temporibus omnis sint sit!
+Expedita mollitia, dolore nemo sapiente perspiciatis commodi suscipit illo delectus similique deleniti molestias amet distinctio. Eligendi, illo quos aliquam perspiciatis recusandae suscipit repellendus quo. Optio reprehenderit animi mollitia velit ea.
+Cumque dicta harum quas corporis reprehenderit minima cupiditate consectetur culpa ratione eius esse aperiam voluptatibus quod corrupti saepe quam ducimus explicabo totam pariatur qui eum, tempore, repellendus omnis. Illo, debitis!
+Illum numquam, et distinctio dignissimos culpa sit non maxime? Cupiditate ipsa explicabo velit, sit, fugit eligendi excepturi quasi beatae magnam aspernatur accusamus quibusdam ipsam, deserunt dolores soluta repellendus distinctio amet!
+Vitae voluptatibus, voluptatum qui nesciunt veritatis sit id debitis, doloremque molestiae earum provident facere eos consequatur, sequi sed corrupti quidem. Incidunt magnam corporis modi culpa porro? Maiores culpa dignissimos iusto.</p>
+</div>
+<script>
+  let stars = document.getElementById('stars');
+  let moon = document.getElementById('moon');
+  let mountains_behind = document.getElementById('mountains_behind');
+  let text = document.getElementById('text');
+  let btn = document.getElementById('btn');
+  let mountains_front = document.getElementById('mountains_front');
+  
+  window.addEventListener('scroll', function(){
+    let value = window.scrollY;
+    stars.style.left = value * 0.25 + 'px';
+    moon.style.top = value * 1.05 + 'px';
+    mountains_behind.style.top = value * 0.5 + 'px';
+    mountains_front.style.top = value * 0 + 'px';
+    text.style.marginRight = value * 4 + 'px';
+    text.style.marginTop = value * 1.5 + 'px';
+    btn.style.marginTop = value * 1.5 + 'px';
+  })
+</script>
+  </body>
